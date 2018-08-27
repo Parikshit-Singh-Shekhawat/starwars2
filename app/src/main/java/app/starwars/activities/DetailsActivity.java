@@ -34,7 +34,7 @@ public class DetailsActivity extends BaseActivity {
     private void getData()
     {
         CharacterListModel characterListModel=(CharacterListModel)getIntent().getSerializableExtra("data");
-        createdDetails.setText(Utilities.convertDateFormats(characterListModel.getCreated(),"yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd HH:mm"));
+        createdDetails.setText(Utilities.convertDateFormats(characterListModel.getCreated(),"yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd HH:mm"));
         massDetails.setText(characterListModel.getMass()+" Kg");
         heightDetails.setText(Utilities.cmToMeters(Integer.parseInt(characterListModel.getHeight()))+" mtr");
         nameDetail.setText(characterListModel.getName());
